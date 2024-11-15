@@ -1,4 +1,4 @@
-#React + Vite
+# React + Vite
 
 Aplikasi ini menggunakan Vite sebagai bundler dan alat build untuk menjalankan aplikasi React. Vite, dilengkapi dengan Hot Module Replacement (HMR) dan beberapa aturan ESLint.
 
