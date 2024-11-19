@@ -1,8 +1,6 @@
-// src/Components/Trending/Trending.jsx
-
 import React, { useEffect, useState } from 'react';
 import './Trending.css';
-import { db, ref, onValue } from '../../config/Firebase';// Firebase import
+import { db, ref, onValue } from '../../config/Firebase';
 import toast from 'react-hot-toast';
 
 const Trending = () => {
@@ -14,10 +12,10 @@ const Trending = () => {
 
   useEffect(() => {
     const fetchTrendingData = () => {
-      const dbRef = ref(db, 'trending'); // Referensi ke path 'trending' di Firebase
+      const dbRef = ref(db, 'trending'); 
       onValue(dbRef, (snapshot) => {
         if (snapshot.exists()) {
-          setTrendingData(snapshot.val()); // Mengambil data dan menyimpannya di state
+          setTrendingData(snapshot.val()); 
         } else {
           console.log('No data available');
         }

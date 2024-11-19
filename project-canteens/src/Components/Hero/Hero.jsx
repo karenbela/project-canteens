@@ -8,8 +8,8 @@ const Hero = () => {
             <h1>
             The taste of traditions's with a modern twist
             </h1>
-            <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, voluptas? Voluptate veniam sapiente harum, a qui veritatis obcaecati nostrum quidem quis expedita unde amet ducimus!
+            <p> 
+            Discover a fusion of rich heritage and contemporary flavors. Our dishes bring timeless recipes to life with a creative touch, offering a unique culinary experience that honors the past while embracing innovation.
             </p>
             <div className="btns">
                 <button className='fff'>Get Start</button>

@@ -16,12 +16,19 @@ const Navbar = () => {
     });
   }, []);
 
+  const handleClick = (targetId) => {
+    const section = document.getElementById(targetId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const hanldeClick = () => {
     setshow(!show);
   };
 
   if (!data) {
-    return <div>Loading...</div>; // Loading state
+    return <div>Loading...</div>;
   }
 
   return (
@@ -32,7 +39,19 @@ const Navbar = () => {
       <ul id="nav-bar" className={show ? 'open' : ''}>
         {Object.keys(data.menuItems).map((key) => (
           <li key={key}>
-            <Link to={data.menuItems[key].link}>{data.menuItems[key].name}</Link>
+            {data.menuItems[key].link.startsWith('#') ? (
+              <a
+                href={data.menuItems[key].link}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleClick(data.menuItems[key].link.substring(1)); // Remove the hash (#) and scroll
+                }}
+              >
+                {data.menuItems[key].name}
+              </a>
+            ) : (
+              <Link to={data.menuItems[key].link}>{data.menuItems[key].name}</Link>
+            )}
           </li>
         ))}
       </ul>
