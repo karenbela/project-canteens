@@ -1,35 +1,38 @@
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #101212;
     padding: 10px 20px;
-    font-family: "Poppins",sans-serif;
+    font-family: "Poppins", sans-serif;
     position: relative;
     z-index: 999;
 }
-nav ul{
+
+nav ul {
     display: flex;
     align-items: center;
-
 }
-nav ul li{
+
+nav ul li {
     list-style: none;
     display: flex;
-
 }
-nav ul li a{
+
+nav ul li a {
     text-decoration: none;
     display: inline-block;
     padding: 10px 20px;
     font-size: 20px;
     color: #f7f7f7;
 }
-.menu-right-side li{
+
+.menu-right-side li {
     padding: 10px;
     cursor: pointer;
 }
-.menu-right-side li button{
+
+.menu-right-side li button {
     padding: 10px 30px;
     background-color: #e4283f;
     font-size: 20px;
@@ -38,16 +41,24 @@ nav ul li a{
     outline: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: all .3s ;
+    transition: all .3s;
 }
-.menu-right-side li button:hover{
+
+.menu-right-side li button:hover {
     background-color: #e41931;
 }
-.menu{
+
+.menu {
     display: none;
 }
-@media (max-width:900px) {
-    nav #nav-bar{
+
+.logo img {
+    max-width: 150px; /* Atur lebar maksimum logo */
+    height: auto; /* Mempertahankan rasio aspek */
+}
+
+@media (max-width: 900px) {
+    nav #nav-bar {
         position: absolute;
         top: 70px;
         padding: 30px;
@@ -56,23 +67,27 @@ nav ul li a{
         right: 0;
         flex-direction: column;
         align-items: unset;
-        /* margin-left: 30px; */
         transform: translateX(-2200px);
         transition: all .4s ease-in-out;
     }
-    nav #nav-bar li{
+
+    nav #nav-bar li {
         padding: 10px;
     }
-    nav #nav-bar.open{
-        transform: translateX(-0px);
+
+    nav #nav-bar.open {
+        transform: translateX(0);
     }
-    .menu{
+
+    .menu {
         display: flex;
     }
-    nav .nav-bar li{
+
+    nav .nav-bar li {
         margin-left: 30px;
     }
-    .logo img{
-        width: 100%;
+
+    .logo img {
+        max-width: 100px; /* Atur lebar maksimum logo untuk tampilan mobile */
     }
 }
